@@ -8,7 +8,7 @@ const thoughtSchema = new Schema(  // create the thoughtSchema using the instruc
             type: String,  // data type is String
             required: true,  // is required
             minlength: 1,  // min length is 1 character
-            maxlenght: 200  // max length is 200 characters
+            maxlenght: 280  // max length is 280 characters
         },
         createdAt: {  // createdAt field
             type: Date,  // data type is Date

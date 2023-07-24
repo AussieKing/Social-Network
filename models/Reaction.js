@@ -8,7 +8,7 @@ const ReactionSchema = new Schema({
     reactionBody: {  // reactionBody field
         type: String,  // data type is String
         required: true,  // is required
-        maxlength: 200  // max length is 200 characters
+        maxlength: 280  // max length is 280 characters
     },
     username: {  // username field
         type: String,  // data type is String
