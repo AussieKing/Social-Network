@@ -1,0 +1,30 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "creation of an API for a social network to handle large amount of unstructured data.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AussieKing/Social-Network.git"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "AussieKing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AussieKing/Social-Network/issues"
+  },
+  "homepage": "https://github.com/AussieKing/Social-Network#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

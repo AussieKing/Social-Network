@@ -1,0 +1,1 @@
+// This is the API routes file for the thoughts
