@@ -14,10 +14,10 @@ const ReactionSchema = new Schema({
         type: String,  // data type is String
         required: true  // is required
     },
-    createdAt: {  // createdAt field
-        type: Date,  // data type is Date
-        default: Date.now,  // default value is the current timestamp
-        get: (createdAtVal) => dateFormat(createdAtVal)  //! POTENTIAL ISSUE  // use the dateFormat function to format the timestamp on query
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        get: timestamp => new Date(timestamp).toLocaleDateString()  //! ISSUE fixed
     }
 },
     {
@@ -29,7 +29,3 @@ const ReactionSchema = new Schema({
 );       
 
 module.exports = ReactionSchema;  // export the ReactionSchema
-
-        
-
-

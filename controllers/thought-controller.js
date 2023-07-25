@@ -1,6 +1,7 @@
 const { Thought, User, Reaction } = require('../models');
 const { Types } = require('mongoose');
 
+// need to define the ThoughtController object to handle the functions for the routes
 const ThoughtController = {
   async getAllThoughts(req, res) {
     try {
@@ -11,6 +12,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the GET /api/thoughts/:thoughtId route
   async getThoughtById(req, res) {
     try {
       const thought = await Thought.findOne({ _id: req.params.thoughtId });
@@ -24,6 +26,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the POST /api/thoughts route
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -33,6 +36,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the DELETE /api/thoughts/:thoughtId route
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findByIdAndDelete(req.params.thoughtId);
@@ -42,6 +46,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the PUT /api/thoughts/:thoughtId route
   async updateThought(req, res) {
     try {
       const thought = await Thought.findByIdAndUpdate(
@@ -59,6 +64,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the POST /api/thoughts/:thoughtId/reactions route
   async addReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -76,6 +82,7 @@ const ThoughtController = {
     }
   },
 
+  // async handler for the DELETE /api/thoughts/:thoughtId/reactions/:reactionId route
   async deleteReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(

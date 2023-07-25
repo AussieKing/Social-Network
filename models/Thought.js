@@ -10,10 +10,10 @@ const thoughtSchema = new Schema(  // create the thoughtSchema using the instruc
             minlength: 1,  // min length is 1 character
             maxlenght: 280  // max length is 280 characters
         },
-        createdAt: {  // createdAt field
-            type: Date,  // data type is Date
-            default: Date.now,  // default value is the current timestamp
-            get: (createdAtVal) => dateFormat(createdAtVal)  //! POTENTIAL ISSUE HERE< TEST // use the dateFormat function to format the timestamp on retrieval
+        ccreatedAt:{
+            type: Date,
+            default: Date.now,
+            get: timestamp => new Date(timestamp).toLocaleString(),  //! ISSUE Fixed
         },
         username: {  // username field
             type: String,  // data type is String
