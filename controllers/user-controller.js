@@ -1,6 +1,7 @@
 const { Thought, User, Reaction } = require('../models');
 const { Types } = require('mongoose');
 
+//! STEP 1: create the ThoughtController object and get all users
 const UserController = {
   async getAllUsers(req, res) {
     try {
@@ -11,6 +12,7 @@ const UserController = {
     }
   },
 
+  //! STEP 2: get a single user by its _id
   async getUserById(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId });
@@ -24,6 +26,7 @@ const UserController = {
     }
   },
 
+  //! STEP 3: create a new user
   async createUser(req, res) {
     try {
       const user = await User.create(req.body);
@@ -33,6 +36,7 @@ const UserController = {
     }
   },
 
+  //! STEP 4: update a user by its _id
   async updateUser(req, res) {
     try {
       const user = await User.findByIdAndUpdate(req.params.userId, req.body, {
@@ -57,6 +61,7 @@ const UserController = {
     }
   },
 
+  //! STEP 5: add a new friend to a user's friend list
   async addFriend(req, res) {
     try {
       const user = await User.findOneAndUpdate(
@@ -74,6 +79,7 @@ const UserController = {
     }
   },
 
+  //! STEP 6: remove a friend from a user's friend list
   async deleteFriend(req, res) {
     try {
       const user = await User.findOneAndUpdate(
