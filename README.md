@@ -38,7 +38,7 @@ In this instance, we were instructed to use Insomnia for testing of the routes.
 
 Please see below a walkthrough video that demonstrates the api routes in Insomnia:
 
-Video Link: [Social Network](https://drive.google.com/file/d/1F1EkjmDIIiJ_sIhg0peQ0Nsam2C5QQaW/view)
+Video Link: [Social Network](https://drive.google.com/file/d/1Ve9BGmumfHM3F71aP2m8bmfFvMtFOMuT/view)
 
 Screenshot of structure on Routes on Insomnia:
 
